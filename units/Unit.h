@@ -11,7 +11,7 @@ class Unit {
         State* state;
 
     public:
-        Unit(std::string name, std::string title, int hitPoints, int damage);
+        Unit(std::string name, int hitPoints, int damage, std::string title="Default");
         virtual ~Unit();
 
         const State& getState() const;
