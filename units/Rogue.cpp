@@ -5,5 +5,5 @@ Rogue::Rogue(std::string name, int hitPoints, int damage, std::string title) : U
 Rogue::~Rogue() {}
 
 void Rogue::attack(Unit* enemy) {
-    unit->takeDamage(this->getDamage());
+    enemy->takeDamage(this->getDamage());
 }
