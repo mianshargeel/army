@@ -1,19 +1,20 @@
 #include <iostream>
 #include "units/Soldier.h"
+#include "units/Rogue.h"
 
 int main() {
-    Soldier* s1 = new Soldier("Soldier1", 150, 20);
-    Soldier* s2 = new Soldier("Soldier2", 150, 20);
+    Soldier* soldier = new Soldier("Soldier", 150, 20);
+    Rogue* rogue = new Rogue("Rogue", 100, 40);
 
-    std::cout << *s1 << std::endl;
-    std::cout << *s2 << std::endl;
+    std::cout << *soldier << std::endl;
+    std::cout << *rogue << std::endl;
 
-    s1->attack(s2);
+    rogue->attack(soldier);
 
-    std::cout << *s1 << std::endl;
-    std::cout << *s2 << std::endl;
+    std::cout << *soldier << std::endl;
+    std::cout << *rogue << std::endl;
 
-    delete s1;
-    delete s2;
+    delete soldier;
+    delete rogue;
     return 0;
 }
