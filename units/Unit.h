@@ -14,6 +14,7 @@ class Unit {
         Unit(std::string name, std::string title, int hitPoints, int damage);
         virtual ~Unit();
 
+        const State& getState() const;
         const std::string& getName() const;
         const std::string& getTitle() const;
         const int getHitPoints() const;
@@ -26,6 +27,8 @@ class Unit {
         virtual void attack(Unit* enemy) = 0;
         virtual void counterAttack(Unit* enemy);
 };
+
+std::ostream& operator<<(std::ostream& out, const Unit& unit);
 
 
 #endif // UNIT_H

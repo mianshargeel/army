@@ -7,6 +7,10 @@ Unit::~Unit() {
     delete state;
 }
 
+const State& Unit::getState() const {
+    return *(this->state);
+}
+
 const std::string& Unit::getName() const {
     return this->name;
 }
@@ -42,4 +46,9 @@ void Unit::attack(Unit* enemy) {
 
 void Unit::counterAttack(Unit* enemy) {
     enemy->takeDamage(this->getDamage() / 2);
+}
+
+std::ostream& operator<<(std::ostream& out, const Unit& unit) {
+    out << unit.getName() << " " << unit.getState();
+    return out;
 }
