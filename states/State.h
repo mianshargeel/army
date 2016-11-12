@@ -2,6 +2,7 @@
 #define STATE_H
 
 #include <iostream>
+#include "../exception.h"
 
 class State {
     protected:
