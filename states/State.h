@@ -26,4 +26,6 @@ class State {
         void addHitPoints(int hp);
 };
 
+std::ostream& operator<<(std::ostream& out, const State& state);
+
 #endif // STATE_H
