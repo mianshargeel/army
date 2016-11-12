@@ -48,3 +48,10 @@ void State::addHitPoints(int hp) {
     }
     this->hitPoints = total;
 }
+
+std::ostream& operator<<(std::ostream& out, const State& state) {
+    out << "[" << state.getTitle() << ", ";
+    out << "hp: " << state.getHitPoints() << "/" << state.getHitPointsLimit();
+    out << ", dmg: " << state.getDamage() << "]";
+    return out; 
+}
