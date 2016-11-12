@@ -1,6 +1,6 @@
 #include "Unit.h"
 
-Unit::Unit(std::string name, int hitPoints, int damage, std::string title="Default")
+Unit::Unit(std::string name, int hitPoints, int damage, std::string title)
     : name(name), state(new State(title, hitPoints, damage)) {}
 
 Unit::~Unit() {
